@@ -1,14 +1,18 @@
+@use "../globals/util/" as u;
 .grid{
     display:grid; 
     grid-template-columns: 1fr;
     gap: 40px;
     grid-template-rows: auto auto;
+    width: min(100%,1000px);
+    margin-inline: auto;
 
-    @media (min-width: 900px) {
+    @include u.breakpoint(large){
         grid-template-columns: 2fr 1fr;
         grid-template-rows: auto;
 
     }
+ 
 
     &__main,
     &__sidebar{
@@ -17,9 +21,23 @@
     &__main{
     
         background-color: hsl(240, 99%, 33%);
+
+        @include u.breakpoint(medium){
+            background-color: hsl(120, 70%, 18%);
+        }
+        @include u.breakpoint(large){
+            background-color: hsl(60, 80%, 18%);
+        }
     }
     &__sidebar{
         background-color: hsl(300, 100%, 30%);
+    
+       @include u.breakpoint_down(medium){
+                text-align: center;
+        }
+                   @include u.breakpoint_down(small) {
+                       text-align: right;
+                   }
     }
 }
 

@@ -1,6 +1,30 @@
 {
+  "name": "sass",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/githukelvin/SASS-BEM-Responsive-design.git"
+  },
+  "author": "kelvin githu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/githukelvin/SASS-BEM-Responsive-design/issues"
+  },
+  "type": "module",
+  "homepage": "https://github.com/githukelvin/SASS-BEM-Responsive-design#readme",
   "devDependencies": {
+    "browser-sync": "^2.27.11",
+    "cssnano": "^5.1.14",
+    "gulp": "^4.0.2",
+    "gulp-cssbeautify": "^3.0.1",
+    "gulp-postcss": "^9.0.1",
     "gulp-sass": "^5.1.0",
+    "gulp-terser": "^2.1.0",
     "sass": "^1.57.1"
   }
 }

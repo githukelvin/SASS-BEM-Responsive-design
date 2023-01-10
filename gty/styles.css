@@ -1,0 +1,85 @@
+html {
+  box-sizing: border-box;
+  font-size: 100%;
+}
+
+*, *::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans", sans-serif;
+  background-color: var(--background-color);
+  color: var(--color);
+}
+
+h1, h2, h3 {
+  font-weight: 700;
+  line-height: 1.1;
+  margin-top: 0;
+}
+
+h1 {
+  font-size: 7.5vw;
+}
+
+p {
+  margin-top: 0;
+  font-weight: 300;
+}
+
+a, a:visited, a:active {
+  text-decoration: none;
+}
+
+:root {
+  --background-color:hsl(0, 0%, 26%);
+  --color:hsl(0, 0%, 100%);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+  grid-template-rows: auto auto;
+  width: min(100%, 1000px);
+  margin-inline: auto;
+}
+@media screen and (min-width: 56.25em) {
+  .grid {
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: auto;
+  }
+}
+.grid__main, .grid__sidebar {
+  padding: 40px;
+}
+.grid__main {
+  background-color: hsl(240deg, 99%, 33%);
+}
+@media screen and (min-width: 43.75em) {
+  .grid__main {
+    background-color: hsl(120deg, 70%, 18%);
+  }
+}
+@media screen and (min-width: 56.25em) {
+  .grid__main {
+    background-color: hsl(60deg, 80%, 18%);
+  }
+}
+.grid__sidebar {
+  background-color: hsl(300deg, 100%, 30%);
+}
+@media (max-width: 56.24875em) {
+  .grid__sidebar {
+    text-align: center;
+  }
+}
+@media (max-width: 43.7485em) {
+  .grid__sidebar {
+    text-align: right;
+  }
+}/*# sourceMappingURL=styles.css.map */

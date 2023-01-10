@@ -1,60 +1,93 @@
 html {
-  box-sizing: border-box;
-  font-size: 100%;
+    box-sizing: border-box;
+    font-size: 100%
 }
 
-*, *::before,
-*::after {
-  box-sizing: inherit;
+*,:after,:before {
+    box-sizing: inherit
 }
 
 body {
-  margin: 0;
-  padding: 0;
-  font-family: "Open Sans", sans-serif;
-  background-color: var(--background-color);
-  color: var(--color);
+    background-color: var(--background-color);
+    color: var(--color);
+    font-family: Open Sans,sans-serif;
+    margin: 0;
+    padding: 0
 }
 
-h1, h2, h3 {
-  font-weight: 700;
-  line-height: 1.1;
-  margin-top: 0;
-  font-family: "Open Sans", sans-serif;
+h1,h2,h3 {
+    font-weight: 700;
+    line-height: 1.1;
+    margin-top: 0
+}
+
+h1 {
+    font-size: 7.5vw
 }
 
 p {
-  margin-top: 0;
-  font-weight: 300;
+    font-weight: 300;
+    margin-top: 0
 }
 
-a, a:visited, a:active {
-  text-decoration: none;
+a,a:active,a:visited {
+    text-decoration: none
 }
 
 :root {
-  --background-color:hsl(0, 0%, 26%);
-  --color:hsl(0, 0%, 100%);
+    --background-color: #424242;
+    --color: #fff
 }
 
 .grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 40px;
-  grid-template-rows: auto auto;
+    display: grid;
+    gap: 40px;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    margin-inline: auto;
+    width: min(100%,1000px)
 }
-@media (min-width: 900px) {
-  .grid {
-    grid-template-columns: 2fr 1fr;
-    grid-template-rows: auto;
-  }
+
+@media screen and (min-width:56.25em) {
+    .grid {
+        grid-template-columns: 2fr 1fr;
+        grid-template-rows: auto
+    }
 }
-.grid__main, .grid__sidebar {
-  padding: 40px;
+
+.grid__main,.grid__sidebar {
+    padding: 40px
 }
+
 .grid__main {
-  background-color: hsl(240deg, 99%, 33%);
+    background-color: #0101a7
 }
+
+@media screen and (min-width:43.75em) {
+    .grid__main {
+        background-color: #0e4e0e
+    }
+}
+
+@media screen and (min-width:56.25em) {
+    .grid__main {
+        background-color: #535309
+    }
+}
+
 .grid__sidebar {
-  background-color: hsl(300deg, 100%, 30%);
-}/*# sourceMappingURL=styles.css.map */
+    background-color: #909
+}
+
+@media (max-width:56.24875em) {
+    .grid__sidebar {
+        text-align: center
+    }
+}
+
+@media (max-width:43.7485em) {
+    .grid__sidebar {
+        text-align: right
+    }
+}
+/*# sourceMappingURL=styles.css.map */
